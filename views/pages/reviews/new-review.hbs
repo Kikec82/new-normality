@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row justify-content-between">
+        <div>
+            <h1>Nueva reseña</h1>
+            <span><i class="fas fa-chevron-left"></i><a href="/review">Reseñas</a></span>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 box-form">
+            <form action="/review/new" method="POST">
+                <div class="form-group">
+                    <label for="airports-list">Aeropuerto</label>
+                    <select name="airport" class="form-control" id="airports-list">
+                        <option>Seleccionar</option>
+                        {{#each airports}}
+                        <option value="{{id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="arrivalDate-input">Fecha del viaje</label>
+                    <input name="travelDate" type="date" class="form-control" id="arrivalDate-input">
+                </div>
+                <div class="form-group">
+                    <label for="migration-input">Tiempo en migración</label>
+                    <input name="migrationTime" type="number" class="form-control" id="migration-input">
+                </div>
+                <div class="form-group">
+                    <label for="descriptionPositive-input">Experiencia positiva</label>
+                    <input name="positiveExperience" type="text" class="form-control" id="descriptionPositive-input">
+                </div>
+                <div class="form-group">
+                    <label for="descriptionNegative-input">Experiencia negative</label>
+                    <input name="negativeExperience" type="text" class="form-control" id="descriptionNegative-input">
+                </div>
+                <div class="form-group">
+                    <label for="rating-input">Rating</label>
+                    <select name="rating" class="form-control" id="rating-input">
+                        <option>Seleccionar</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pcr" name="pcr">
+                    <label class="form-check-label" for="pcr">
+                        PCR </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="vaccine" name="vaccine">
+                    <label class="form-check-label" for="vaccine">
+                        VACUNA
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="greenPassport" name="greenPassport">
+                    <label class="form-check-label" for="greenPassport">
+                        GREEN PASSPORT
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="quarantine" name="quarantine">
+                    <label class="form-check-label" for="quarantine">
+                        CUARENTENA
+                    </label>
+                </div>
+                <br>
+                <button type="submit" class="btn-get-started">Crear review</button>
+                <br>
+                <br>
+            </form>
+        </div>
+
+    </div>
+</div>

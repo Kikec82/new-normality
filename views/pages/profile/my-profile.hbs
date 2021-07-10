@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row justify-content-between">
+        <div>
+            <h2>Mi Perfil</h2>
+            <input hidden id="review_id" data-id={{id}} />
+            <span><i class="fas fa-chevron-left"></i><a href="/">Inicio</a></span>
+        </div>
+        <br>
+        <div class="d-flex justify-content-end align-items-center">
+            <div class="btn-group">
+                <a class="btn btn-danger btn-lg" href="/profile/{{_id}}/delete">Eliminar</a>
+                <a class="btn btn-primary btn-lg" href="/profile/{{_id}}/edit">Editar</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <section class="section about-section rounded " id="about">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="about-text go-to">
+                        <h3 class="dark-color">{{name}}</h3>
+                        <p>{{description}}</p>
+                        <div class="row about-list">
+                            <div class="col-md-8">
+                                <div class="media">
+                                    <p><b>E-mail</b> {{mail}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-avatar">
+                        <img class='img-avatar' src="{{image}}" alt="{{name}}">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
